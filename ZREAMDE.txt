@@ -1,0 +1,44 @@
+This is a pacakge to get the vectormagnetogram (Bx,By,Bz)  based on the Huairou 35cm Telescope data
+written by Dr. Shangbin Yang  2019.01.14.  contact email: yangshb@nao.cas.cn
+
+
+------------------------------------ IDL procedure---------------------------------------------------------
+hsos_35cm_obs_processing.pro  is the main procedure, Use this procedure to show the vector magnetogram based on the sample data
+
+crossfct.pro       Caculate the shift based on correlation method
+fft_expand.pro  expand a 2d data using FFT approach
+free_field.pro    Get the potential field based on the LOS B for comparing with Vector B to remove the ambiguity.
+l5calib.pro        LOS magnetic field calibration
+vectt.pro          draw the vector field overlay LOS magnetic field
+
+Install IDL Astronomy Library firstly:   https://idlastro.gsfc.nasa.gov/homepage.html
+
+-------------------------------------------Sample data-----------------------------------------------------------------------
+the sample data is 
+L517041170712022234.fit   (V signal)
+U517041170712022142.fit  (U signal)
+Q517041170712022054.fit  (Q signal)
+
+-------------------------------------Instruction for the data file name -----"L517041170712022234.fit" as the sample:
+
+1    2      3           4            5              6
+L     5    17041  170712  (02 22 34 ) .fit
+Six parts in the file name.
+
+1:  "L" for V,  "Q" for Q,   "U" for U,  "V" for Doppler 
+2.  "5" for the FeI line 5324,  "4" for H-beta Line 4861
+3.   "17041" HSOS AR Number.   "17" is for 2017, "041" is the serial number record in HSOS
+4.  ¡°170712¡±  stand for the date: 20170712
+5. ¡°02 22 34¡± is the time
+6.  file format. ".fit¡± for the fits file
+
+
+-----------------------------------------Content in the file data---------------------------
+The data is stored in [NX,NY,2]
+[NX,NY,0] is the 0.5I+0.5V(Q, U)
+[Nx,Ny,1] is the  0.5I-0.5V(Q,U)
+
+
+
+
+
