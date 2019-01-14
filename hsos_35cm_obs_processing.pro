@@ -1,6 +1,6 @@
 pro hsos_35cm_obs_processing
 
-cd,'D:\data\35cm'
+
 device,decomposed=0
 loadct,0
 
