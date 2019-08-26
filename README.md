@@ -7,4 +7,4 @@ written by Dr. Shangbin Yang  2019.01.14.  contact email: yangshb@nao.cas.cn
 
 Please Read the ZREADME.txt in the package directory to see HOWTO
 
-Please install IDL Astronomy Library before using this package
+Please install IDL Astronomy Library (https://idlastro.gsfc.nasa.gov/) before using this package
